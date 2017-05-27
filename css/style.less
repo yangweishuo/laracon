@@ -1,0 +1,362 @@
+.all(@w,@h,@b){
+  width: @w;
+  height: @h;
+  background: @b;
+}
+.box(@d:row){
+  display: -webkit-flex;
+  -webkit-flex-direction: @d;
+}
+//daohang
+nav{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+  ul{
+    width: 100%;
+    .box;
+    text-align: center;
+    li{
+      flex: 1;
+      padding: 20px 0 10px;
+      a{
+        font-size: 16px;
+        color: #000;
+      }
+      a:hover{
+        text-decoration: none;
+        border-bottom:2px solid #772515;
+      }
+    }
+  }
+  @media all and(max-width:768px){
+    display: none;
+  }
+}
+//tou
+.header{
+
+  background-image: linear-gradient(-180deg, #F8F8EC 0%, #E2F6F9 100%);
+  background-size: 1200px 950px;
+  background-repeat: repeat;
+  color: #4e4e4e;
+  background-position: center;
+  height: 950px;
+  position: relative;
+  .title{
+    padding: 200px 0;
+    background-image: url(../img/city-fg-day.svg), url(../img/city-bg-day.svg);
+    background-size: 1300px 950px;
+    background-repeat: no-repeat, no-repeat;
+    color: #4e4e4e;
+    background-position-x: center;
+    background-position-y: 70px;
+    height: 950px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  .container{
+    max-width: 620px;
+    z-index: 0;
+    position: relative;
+    top: 120px;
+    h2{
+      font-weight: 800;
+      font-size: 4.25em;
+      @media all and(min-width:760px){
+        font-size: 68px;
+      }
+    }
+    h3{
+      font-weight: 300;
+      font-size: 1.5em;
+    }
+    p{
+      font-size: 1.3em;
+      color: #4e4e4e;
+      opacity: 0.6;
+      margin-top: 1.25em;
+      line-height: 1.75em;
+      font-weight: 100;
+      @media (min-width: 768px){
+        font-size: 21px;
+      }
+    }
+    .card{
+      border: 2px solid rgba(0, 0, 0, 0.3);
+      padding: 3rem;
+      background: white;
+      font{
+        font-size: 1em;
+        color: #888888;
+        font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.5em;
+        margin-bottom: 1.25em;
+        display: block;
+      }
+      input[type='text']{
+        margin-bottom: 1.25em;
+      }
+      input[type='button']{
+        -webkit-box-shadow: none;
+        background-image: none;
+        border: 2px solid #772515;
+        background: #E57D69;
+        text-shadow: none;
+        font-size: 1.125em;
+      }
+    }
+  }
+}
+//zhuti
+#one{
+  background: #fff;
+  padding-bottom:40px;
+}
+#the-schedule h2, #the-schedule h3 {
+  color: #fff;
+}
+
+#the-schedule h2:after {
+  background-color: #4e4e4e;
+}
+#activities, #sponsors {
+  background: #f9f9f9;
+}
+#the-schedule {
+  background: #E57D69;
+}
+#hotels h2:after{
+  background-color: #fff;
+}
+section{
+  padding: 60px;
+  border-bottom: 2px solid rgba(86, 72, 70, 0.3);
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h2 {
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: #4e4e4e;
+    font-size: 2.25em;
+    margin-bottom: 20px;
+  }
+  h2::after {
+    width: 100px;
+    margin-top: 0.45em;
+    margin-left: 20px;
+    height: 4px;
+    content: "";
+    position: absolute;
+    background-color: #E57D69;
+  }
+  .speaker-item img {
+    max-width: 300px;
+  }
+  .speaker-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: #E57D69;
+    a{
+      color: #E57D69;
+    }
+    font-size: 1.5em;
+  }
+  h5 {
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+  }
+  .title-red {
+    color: #E57D69;
+  }
+  p {
+    font-size: 1em;
+    color: #888888;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  p {
+    margin: 0 0 10px;
+  }
+  a {
+    color: #E57D69;
+  }
+  .schedule-list {
+    padding-left: 0;
+  }
+  ol, ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+  .day-schedule-title h3 {
+    float: left;
+    margin-top: 3px;
+    margin-right: 15px;
+  }
+   .schedule-time {
+  font-size: 0.875em;
+  float: left;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+  .event-name {
+    background-image: url(../img/schedule-event-dot.svg);
+    padding-left: 40px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+  }
+  .event-name {
+  margin-left: 90px;
+  display: block;
+}
+  .day-schedule-title {
+    border-bottom: 1px solid rgba(101, 62, 54, 0.3);
+  }
+  .schedule-list li {
+    border-bottom: 1px solid rgba(101, 62, 54, 0.3);
+    padding: 14px 0 11px 0;
+  }
+  .schedule-list > li {
+  position: relative;
+  display: block;
+  list-style: none;
+}
+  .schedule-day{
+    padding: 20px;
+  }
+  .hotel-novotel {
+    background-image: url(../img/icon-hotel-novotel.svg);
+  }
+  .hotel-sheraton {
+    background-image: url(../img/icon-hotel-sheraton.svg);
+  }
+  .hotel-hampton{
+    background: url("../img/icon-hotel-hampton.svg");
+  }
+  .hotel-hilton{
+    background: url("../img/icon-hotel-hilton.svg");
+  }
+  .hotel-w{
+    background: url("../img/icon-hotel-w.svg");
+  }
+  .hotel-description {
+  padding-left: 80px;
+  margin: 20px 0;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+}
+  //-----------------------
+  .partner-bugsnag {
+    background-image: url(../img/partner-bugsnag.svg);
+  }
+  .partner-larajobs{
+    background: url("../img/partner-larajobs.svg");
+  }
+  .partner-laracasts{
+    background:url("../img/partner-laracasts.svg");
+  }
+  .partner-contest-kit{
+    background: url("../img/partner-contest-kit.svg");
+  }
+  .partner-sentry{
+    background: url("../img/partner-sentry.svg");
+  }
+  .partner-nexmo{
+    background: url("../img/partner-nexmo.svg");
+  }
+  .partner-algolia{
+    background: url("../img/partner-algolia.svg");
+  }
+  .partner-sensiolabs{
+    background: url("../img/partner-sensiolabs.svg");
+  }
+  .partner-tighten{
+    background: url("../img/partner-tighten.svg");
+  }
+  .partner-vehikl{
+    background: url("../img/partner-vehikl.svg");
+  }
+  .partner-logo {
+  height: 60px;
+  width: 220px;
+  margin: 30px auto;
+  display: block;
+}
+  .partner-logo-container {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+  }
+  //----------------------------
+}
+footer{
+  padding:60px 0;
+  width: 100%;
+  background: #4e4e4e;
+  color: #fff;
+  a{
+    color: #E57D69;
+  }
+  .bottom{
+    img{
+      padding-top: 10px;
+    }
+    margin-top: 10px;
+    border: 1px solid #fff;
+  }
+  p{
+    margin-top:10px;
+    line-height: 20px;
+  }
+  .schoger-logo {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 5px auto;
+    background-image: url(../img/schoger-logo.svg);
+  }
+  .credits {
+    margin: 10px auto 0 auto;
+    display: block;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+@media all and (max-width: 768px){
+  .credits {
+    display: block !important;
+    float: none !important;
+    border: 1px solid #ccc;
+    width: 220px;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 70px!important;
+  }
+
+}
+
+
